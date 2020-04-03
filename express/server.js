@@ -11,7 +11,6 @@ const router = express.Router();
 router.get('/hello', (req, res) => res.send({ test: 'hello222'}));
 
 router.get('/another', (req, res) => res.send({ route: 'hello2' }));
-router.get('/', (req, res) => res.send({ test: 'hello'}));
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 module.exports = app;
