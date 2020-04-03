@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 
 router.get('/', (req, res) => res.send({ test: 'hello'}));
+router.get('/hello', (req, res) => res.send({ test: 'hello222'}));
 
 router.get('/another', (req, res) => res.send({ route: 'hello2' }));
 
