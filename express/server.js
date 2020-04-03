@@ -6,15 +6,11 @@ const app = express();
 const bodyParser = require('body-parser');
 
 const router = express.Router();
-router.get('/', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/html' });
-  res.write('<h1> dasdqasds Hello from Express.js test1!</h1>');
-  res.end();
-});
-router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
-router.post('/', (req, res) => res.json({ test: 'hello'}));
 
-app.use(bodyParser.json());
+router.get('/', (req, res) => res.send({ test: 'hello'}));
+
+router.get('/another', (req, res) => res.send({ route: 'hello2' }));
+
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 module.exports = app;
