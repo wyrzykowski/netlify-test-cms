@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 
 router.get('/hello', (req, res) => {
-  res.send('hello');
+  res.send('hello test 04');
   });
 
   router.get('/hello2', (req, res) => {
@@ -22,3 +22,4 @@ app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 module.exports = app;
 module.exports.handler = serverless(app);
+
