@@ -5,7 +5,6 @@
   "main": "functions/server.js",
   "scripts": {
     "build": "netlify-lambda build build",
-    "start": "nodemon server-local.js"
   },
   "repository": {
     "type": "git",
