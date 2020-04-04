@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
 const router = express.Router();
 
 router.get('/hello', (req, res) => {
-  res.send('hello test 04');
+  res.send('hello test 04 build');
   });
 
   router.get('/hello2', (req, res) => {
