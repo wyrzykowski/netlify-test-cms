@@ -17,7 +17,7 @@ router.get('/hello', (req, res) => {
   app.us
 
 app.use(bodyParser.json());
-app.use('/.netlify/functions/server', router);  // path must route to lambda
+app.use('/.netlify/functions/index', router);  // path must route to lambda
 
 
 module.exports = app;
